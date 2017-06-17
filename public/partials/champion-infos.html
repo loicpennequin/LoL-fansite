@@ -1,0 +1,31 @@
+<div ng-controller="championInfosCtrl" ng-class="{'preload': contentLoaded == false}">
+  <div ng-include="'partials/components/header.html'"></div>
+
+  <div class="container content">
+    <div class="row">
+
+      <div class="col-md-12 text-center champion-title">
+        <!-- <img class="champion-title-bg" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_0.jpg"></img> -->
+        <h2>{{champion.name}}</h2>
+        <h3>{{champion.title}}</h3>
+        <img class="champion-icon-round champion-icon-right" ng-src='http://ddragon.leagueoflegends.com/cdn/7.11.1/img/champion/{{champion.image.full}}' alt="{{champion.name}}"/>
+      </div>
+
+      <div class="col-md-7">
+
+      </div>
+      <div class="col-md-5">
+        <div class="carousel-wrapper">
+          <div uib-carousel active="active" interval="none">
+            <div uib-slide ng-repeat="skin in skins track by $index" index="skin.num">
+              <img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg" class="img-responsive">
+              <div class="carousel-caption">
+                <h4>{{skin.name}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

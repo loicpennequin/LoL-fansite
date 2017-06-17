@@ -1,0 +1,57 @@
+.champion-cell
+  border: solid white 2px
+  position: relative
+  padding: 0
+  // transition: 0.2s
+  &:hover
+    transform: scale(1.2)
+    border: solid 2px $color1
+    z-index: 10
+    cursor: pointer
+
+.infos-wrapper
+  position: relative
+  overflow: hidden
+
+.champion-name
+  font-family: $font1
+  font-size: 1.2em
+  background-color: rgba(0,0,0,0.5)
+  color: $color1
+  padding: 3px
+  opacity: 0
+  position: absolute
+  top: 50%
+  left: -50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  z-index: 2
+  transition: all 0.5s
+
+.champion-cell:hover .champion-name
+  opacity: 1
+  left: 50%
+  animation-name: champName-anim
+  animation-duration: 2s
+  animation-iteration-count: infinite
+
+.champion-cell:hover .champion-icon
+  opacity: 1
+  filter: contrast(120%) grayscale(75%)
+
+@keyframes champName-anim
+  from, to
+    text-shadow: none
+  50%
+    text-shadow: 0 0 3px $color1
+
+.champion-cell.ng-move, .champion-cell.ng-enter, .champion-cell.ng-leave
+  transition: all linear 0.3s
+
+.champion-cell.ng-leave.ng-leave-active, .champion-cell.ng-move, .champion-cell.ng-enter
+  opacity: 0
+  transform: translateX(-200%)
+
+.champion-cell.ng-leave, .champion-cell.ng-move.ng-move-active, .champion-cell.ng-enter.ng-enter-active
+  opacity: 1
+  transform: none

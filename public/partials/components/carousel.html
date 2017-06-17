@@ -1,0 +1,9 @@
+<div class="carousel-wrapper text-center">
+  <span class="glyphicon glyphicon-chevron-left carousel-button-left" ng-click="prevSkin()"></span>
+  <div ng-repeat="skin in skins">
+    <a target="blank" ng-href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg">
+      <img class="slide" ng-if="isSkinActive(skin.num)"  ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg" alt="{{skin.name}}"/>
+    </a>
+  </div>
+  <span class="glyphicon glyphicon-chevron-right carousel-button-right" ng-click="nextSkin()"></span>
+</div>

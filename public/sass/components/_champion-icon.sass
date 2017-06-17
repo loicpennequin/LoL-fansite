@@ -1,0 +1,21 @@
+.champion-icon
+  width: 100%
+  filter: contrast(120%) grayscale(00%)
+  margin: 0
+
+.champion-icon-round
+  @extend .champion-icon
+  border: solid $white 5px
+  box-shadow: 0 0 5px $color1
+  border-radius: 50%
+  width: 120px
+
+.champion-icon-right
+  @extend .champion-icon
+  position: absolute
+  top: 0
+  right: 10%
+
+.champion-cell:hover .champion-icon
+  opacity: 1
+  filter: contrast(120%) grayscale(75%)

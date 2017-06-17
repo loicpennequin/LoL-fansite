@@ -1,0 +1,56 @@
+@import var
+
+@import components/tags
+@import components/champion-icon
+@import components/carousel
+
+@import sections/header
+@import sections/championslist
+@import sections/championinfos
+
+@font-face
+  font-family: "Friz Quadrata Medium"
+  src: url("fonts/Friz-Quadrata-Std-Medium.otf")
+
+*
+  box-sizing: border-box
+
+html, body
+  margin : 0
+  padding: 0
+  background: url('../assets/img/background.jpg')
+  background-size: cover
+  background-attachment: fixed
+
+.centered
+  margin-left: auto
+  margin-right: auto
+
+.preload *
+  -webkit-transition: none !important
+  -moz-transition: none !important
+  -ms-transition: none !important
+  -o-transition: none !important
+
+// .row
+//   display: -webkit-box
+//   display: -webkit-flex
+//   display: -ms-flexbox
+//   display: flex
+//   flex-wrap: wrap
+//
+// .row > [class*='col-']
+//   display: flex
+//   flex-direction: column
+
+.content
+  border-radius: 20px
+  background-color: rgba(0,0,0,0.9)
+  position: relative
+
+  h2
+    color: $color1
+    font-family: $font1
+
+  .row
+    padding: 25px

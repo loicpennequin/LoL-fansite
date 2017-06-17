@@ -1,0 +1,29 @@
+<div ng-controller="championsCtrl" ng-class="{'preload': contentLoaded == false}">
+
+  <div ng-include="'partials/components/header.html'"></div>
+
+  <div class="container content">
+    <div class="row">
+
+      <div class="col-md-12 text-center tags">
+        <div ng-repeat="tag in championsTags" class="tag" ng-class="{'tag-active' : isTagSelected(tag)}" ng-click="selectTag(tag)">{{tag}}</div>
+        <div>
+          recherche par nom
+          <input type="text" ng-model="champName">
+        </div>
+      </div>
+
+      <div class="col-md-1 champion-cell" ng-repeat="champion in champions | orderBy: 'name' | championsTagsFilter: selectedTags | filter: {name : champName}" ng-mouseover="isChampHighlighted(true)" ng-mouseleave="isChampHighlighted(false)">
+        <a ng-href="#!/champions/{{champion.id}}">
+          <div class="infos-wrapper">
+            <div class="champion-name text-center">
+              {{champion.name}}
+            </div>
+            <img class="champion-icon" ng-src='http://ddragon.leagueoflegends.com/cdn/7.11.1/img/champion/{{champion.image.full}}' alt="{{champion.name}}"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
