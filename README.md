@@ -1,4 +1,4 @@
-# Gestionnaire de planning hebdomadaire pour organismes de formation
+# Projet de Fansite League of Legends
 
 ## Installation
 
