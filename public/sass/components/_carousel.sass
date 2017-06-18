@@ -1,5 +1,23 @@
 .carousel-wrapper
   width: 100%
-  border: solid $color1 2px
+  border: solid $color1 4px
+  box-shadow: 0 0 0 10px $color1-dark-half, 0 0 0 7px $color1-dark
   margin-left: auto
   margin-right: auto
+
+.carousel-caption
+  color: $color1
+  text-shadow: 0 0 1px black
+  font-family: $font1
+  background-color: rgba(0,0,0,0.5)
+  padding-top: 0
+  border-radius: 5px
+
+.carousel-indicators
+  li
+    border-color: $color1
+  .active
+    background-color: $color1
+
+.carousel-control
+  color: $color1

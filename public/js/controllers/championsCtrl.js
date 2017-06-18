@@ -25,7 +25,6 @@ app.controller('championsCtrl', function($scope, $http, $timeout){
       $timeout(function(){
         $scope.contentLoaded = true;
       },1500);
-
     });
 
     //select tags

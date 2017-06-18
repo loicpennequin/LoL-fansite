@@ -3,6 +3,7 @@
 @import components/tags
 @import components/champion-icon
 @import components/carousel
+@import components/button
 
 @import sections/header
 @import sections/championslist
@@ -44,13 +45,13 @@ html, body
 //   flex-direction: column
 
 .content
-  border-radius: 20px
+  margin: 30px auto
   background-color: rgba(0,0,0,0.9)
   position: relative
-
-  h2
-    color: $color1
-    font-family: $font1
+  margin-bottom: 80px
+  padding-bottom: 20px
+  border: solid 3px $color1
+  box-shadow: 0 0 0 7px $color1-dark, 0 0 0 10px $color1-dark-half
 
   .row
     padding: 25px

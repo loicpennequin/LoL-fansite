@@ -1,9 +1,7 @@
-<div ng-controller="championsCtrl" ng-class="{'preload': contentLoaded == false}">
-
-  <div ng-include="'partials/components/header.html'"></div>
+<div ng-controller="championsCtrl">
 
   <div class="container content">
-    <div class="row">
+    <div class="row" ng-class="{'preload': contentLoaded == false}">
 
       <div class="col-md-12 text-center tags">
         <div ng-repeat="tag in championsTags" class="tag" ng-class="{'tag-active' : isTagSelected(tag)}" ng-click="selectTag(tag)">{{tag}}</div>

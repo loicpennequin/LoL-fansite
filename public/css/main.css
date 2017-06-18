@@ -1,7 +1,7 @@
 .tag {
   display: inline-block;
-  border: solid 1px #e0bc2e;
-  color: #e0bc2e;
+  border: solid 1px #bfb050;
+  color: #bfb050;
   border-radius: 5px;
   padding: 3px 10px;
   cursor: pointer;
@@ -14,7 +14,7 @@
 
 .tags {
   margin-bottom: 30px;
-  color: #e0bc2e;
+  color: #bfb050;
   font-family: "Friz Quadrata Medium"; }
   .tags input[type="text"] {
     color: black; }
@@ -26,7 +26,7 @@
 
 .champion-icon-round {
   border: solid #eee 5px;
-  box-shadow: 0 0 5px #e0bc2e;
+  box-shadow: 0 0 5px #bfb050;
   border-radius: 50%;
   width: 120px; }
 
@@ -41,9 +41,38 @@
 
 .carousel-wrapper {
   width: 100%;
-  border: solid #e0bc2e 2px;
+  border: solid #bfb050 4px;
+  box-shadow: 0 0 0 10px rgba(84, 76, 31, 0.5), 0 0 0 7px #544c1f;
   margin-left: auto;
   margin-right: auto; }
+
+.carousel-caption {
+  color: #bfb050;
+  text-shadow: 0 0 1px black;
+  font-family: "Friz Quadrata Medium";
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 0;
+  border-radius: 5px; }
+
+.carousel-indicators li {
+  border-color: #bfb050; }
+.carousel-indicators .active {
+  background-color: #bfb050; }
+
+.carousel-control {
+  color: #bfb050; }
+
+.button, .button-gold {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-family: "Friz Quadrata Medium"; }
+  .button:hover, .button-gold:hover {
+    filter: contrast(125%); }
+
+.button-gold {
+  background: linear-gradient(#bfb050, #1b180a); }
 
 header {
   background-color: black;
@@ -55,11 +84,11 @@ header {
     font-family: "Friz Quadrata Medium";
     font-size: 5em;
     color: transparent;
-    background: linear-gradient(#62520f, #e0bc2e);
+    background: linear-gradient(#bfb050, #1b180a);
     background-clip: text;
     -webkit-text-stroke: 2px #4893e2;
     margin-top: 30px;
-    border-bottom: solid 1px #e0bc2e;
+    border-bottom: solid 1px #bfb050;
     filter: contrast(120%); }
 
 .champion-cell {
@@ -68,7 +97,7 @@ header {
   padding: 0; }
   .champion-cell:hover {
     transform: scale(1.2);
-    border: solid 2px #e0bc2e;
+    border: solid 2px #bfb050;
     z-index: 10;
     cursor: pointer; }
 
@@ -80,7 +109,7 @@ header {
   font-family: "Friz Quadrata Medium";
   font-size: 1.2em;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #e0bc2e;
+  color: #bfb050;
   padding: 3px;
   opacity: 0;
   position: absolute;
@@ -106,7 +135,7 @@ header {
   from, to {
     text-shadow: none; }
   50% {
-    text-shadow: 0 0 3px #e0bc2e; } }
+    text-shadow: 0 0 3px #bfb050; } }
 .champion-cell.ng-move, .champion-cell.ng-enter, .champion-cell.ng-leave {
   transition: all linear 0.3s; }
 
@@ -121,31 +150,84 @@ header {
 .champion-title {
   overflow: hidden;
   position: relative;
-  height: 150px; }
+  height: 150px;
+  border: solid #bfb050 1px;
+  box-shadow: 0 0 0 2px rgba(191, 176, 80, 0.5);
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0; }
+  .champion-title .champion-title-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 150px;
+    width: 100%;
+    z-index: 1;
+    mask-image: linear-gradient(to right, transparent 40%, black);
+    filter: blur(1px) contrast(150%); }
   .champion-title h2, .champion-title h3 {
+    padding-left: 10%;
     font-family: "Friz Quadrata Medium";
-    position: relative;
-    z-index: 2; }
+    text-shadow: 2px 2px 0 rgba(84, 76, 31, 0.5); }
   .champion-title h2 {
-    color: #e0bc2e;
-    font-size: 4em;
-    margin-bottom: 0; }
+    background: url("../assets/img/bg-cracks.jpg"), #bfb050;
+    background-blend-mode: multiply;
+    background-clip: text;
+    color: transparent;
+    font-size: 5em;
+    margin-bottom: 0;
+    border-bottom: 2px solid rgba(191, 176, 80, 0.5); }
   .champion-title h3 {
-    color: #eee;
+    color: #bfb050;
     margin-top: 0;
-    size: 0.8em; }
+    size: 0.7em; }
 
 .lore {
-  color: #e0bc2e;
+  color: #bfb050;
   font-family: "Friz Quadrata Medium"; }
 
-.champion-title-bg {
-  position: absolute;
-  top: -30%;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  opacity: 0.3; }
+.spells-section {
+  background: url("../assets/img/bg-cracks-low-contrast.jpg"), rgba(191, 176, 80, 0.5);
+  background-size: cover;
+  background-blend-mode: multiply;
+  border: 3px solid #bfb050;
+  box-shadow: 0 0 0 5px #544c1f; }
+  .spells-section h3 {
+    font-family: "Friz Quadrata Medium";
+    margin-bottom: 10px; }
+
+.spells-wrapper {
+  text-align: center; }
+
+.spell {
+  font-family: "Friz Quadrata Medium";
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  display: inline-block; }
+
+.spell-icon {
+  background-color: rgba(191, 176, 80, 0.5);
+  display: inline-block;
+  border: solid 2px rgba(191, 176, 80, 0.5);
+  box-shadow: 0 0 0 3px rgba(84, 76, 31, 0.5);
+  padding: 5px; }
+  .spell-icon img {
+    width: 100%; }
+  .spell-icon:hover {
+    filter: contrast(110%) brightness(120%); }
+
+.spell-text {
+  color: #bfb050;
+  transition: all 0.5s;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  font-family: "Lato", sans-serif;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.8); }
 
 @font-face {
   font-family: "Friz Quadrata Medium";
@@ -171,12 +253,13 @@ html, body {
   -o-transition: none !important; }
 
 .content {
-  border-radius: 20px;
+  margin: 30px auto;
   background-color: rgba(0, 0, 0, 0.9);
-  position: relative; }
-  .content h2 {
-    color: #e0bc2e;
-    font-family: "Friz Quadrata Medium"; }
+  position: relative;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  border: solid 3px #bfb050;
+  box-shadow: 0 0 0 7px #544c1f, 0 0 0 10px rgba(84, 76, 31, 0.5); }
   .content .row {
     padding: 25px; }
 

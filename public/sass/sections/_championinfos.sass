@@ -1,34 +1,87 @@
-.content
-
 .champion-title
   overflow: hidden
   position: relative
   height: 150px
+  border: solid $color1 1px
+  box-shadow: 0 0 0 2px $color1-half
+  margin-bottom: 30px
+  background-color: rgba(0,0,0,0.5)
+  padding: 0
+
+  .champion-title-bg
+    position: absolute
+    top: 0
+    left: 0
+    min-height: 150px
+    width: 100%
+    z-index: 1
+    mask-image: linear-gradient(to right, transparent 40%, black)
+    filter: blur(1px) contrast(150%)
 
   h2, h3
+    padding-left: 10%
     font-family: $font1
-    position: relative
-    z-index: 2
+    text-shadow: 2px 2px 0 $color1-dark-half
 
   h2
-    color: $color1
-    font-size: 4em
+    background: url('../assets/img/bg-cracks.jpg'), $color1
+    background-blend-mode: multiply
+    background-clip: text
+    color: transparent
+    font-size: 5em
     margin-bottom: 0
-
+    border-bottom: 2px solid $color1-half
 
   h3
-    color: $white
+    color: $color1
     margin-top: 0
-    size: 0.8em
+    size: 0.7em
 
 .lore
   color: $color1
   font-family: $font1
 
-.champion-title-bg
-  position: absolute
-  top: -30%
-  left: 0
-  width: 100%
-  z-index: 1
-  opacity: 0.3
+.spells-section
+  background: url('../assets/img/bg-cracks-low-contrast.jpg'), $color1-half
+  background-size: cover
+  background-blend-mode: multiply
+  border: 3px solid $color1
+  box-shadow: 0 0 0 5px $color1-dark
+
+  h3
+    font-family: $font1
+    margin-bottom: 10px
+
+.spells-wrapper
+  text-align: center
+
+.spell
+  font-family: $font1
+  font-size: 1em
+  margin-bottom: 10px
+  padding: 10px 10px
+  display: inline-block
+
+.spell-icon
+  background-color: $color1-half
+  display: inline-block
+  border: solid 2px $color1-half
+  box-shadow: 0 0 0 3px $color1-dark-half
+  padding: 5px
+  img
+    width: 100%
+
+  &:hover
+    filter: contrast(110%) brightness(120%)
+
+.spell-text
+  color: $color1
+  transition: all 0.5s
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 10px
+  padding: 5px 10px
+  font-family: $font2
+  height: 120px
+  background-color: rgba(0,0,0,0.8)
