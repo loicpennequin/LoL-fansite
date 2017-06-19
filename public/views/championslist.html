@@ -1,6 +1,10 @@
 <div ng-controller="championsCtrl">
 
-  <div class="container content">
+  <div class="loading" ng-hide="loading">
+    Loading...
+  </div>
+
+  <div class="container content" ng-show="loading">
     <div class="row" ng-class="{'preload': contentLoaded == false}">
 
       <div class="col-md-12 text-center tags">

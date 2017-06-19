@@ -3,6 +3,7 @@ app.controller('championsCtrl', function($scope, $http, $timeout){
     $scope.selectedTags = [];
     $scope.champions=[];
     $scope.contentLoaded = false;
+    $scope.loading = false;
 
     //toggle function
     $scope.toggle = function(toggle){
@@ -22,6 +23,7 @@ app.controller('championsCtrl', function($scope, $http, $timeout){
       });
       $scope.championsTags = Array.from(new Set(championsTags))
       $scope.selectedTags = Array.from(new Set(championsTags))
+      $scope.loading = true;
       $timeout(function(){
         $scope.contentLoaded = true;
       },1500);

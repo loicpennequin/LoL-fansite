@@ -1,0 +1,49 @@
+.centered
+  margin-left: auto
+  margin-right: auto
+
+.preload *
+  -webkit-transition: none !important
+  -moz-transition: none !important
+  -ms-transition: none !important
+  -o-transition: none !important
+
+// .row
+//   display: -webkit-box
+//   display: -webkit-flex
+//   display: -ms-flexbox
+//   display: flex
+//   flex-wrap: wrap
+//
+// .row > [class*='col-']
+//   display: flex
+//   flex-direction: column
+
+.content
+  margin: 150px auto
+  background-color: rgba(0,0,0,0.9)
+  position: relative
+  margin-bottom: 80px
+  padding-bottom: 20px
+  border: solid 3px $color1
+  box-shadow: 0 0 0 7px $color1-dark, 0 0 0 10px $color1-dark-half
+
+  .row
+    padding: 25px
+
+.body-bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  transform: scaleX(-1)
+
+.loading
+  color: $color1
+  font-size: 50px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-family: $font1
+  -webkit-text-stroke : 2px $color1-darker

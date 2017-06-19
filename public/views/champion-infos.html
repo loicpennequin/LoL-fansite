@@ -1,0 +1,67 @@
+<div ng-controller="championInfosCtrl">
+  <!-- <div ng-include="'partials/components/header.html'"></div> -->
+  <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_0.jpg" class="body-bg">
+
+  <div class="loading" ng-hide="loading">
+    Loading...
+  </div>
+
+  <div class="container content" ng-show="loading">
+    <div class="row">
+
+      <div class="col-md-12 champion-title">
+        <img class="champion-title-bg" ng-src="assets/img/banniere/{{champion.key}}.jpg" alt="banniere">
+        <h2>{{champion.name}}</h2>
+        <h3>{{champion.title}}</h3>
+      </div>
+
+      <div class="col-md-6">
+        <div class="section spells-section">
+          <h3 class="text-center">ABILITIES</h3>
+          <div class="spells-wrapper">
+            <div class="spell">
+              <div class="spell-icon" ng-click="selectPassive()">
+                <img ng-src="http://ddragon.leagueoflegends.com/cdn/7.11.1/img/passive/{{champion.passive.image.full}}" alt="">
+              </div>
+            </div>
+            <div ng-repeat="spell in champion.spells" class="spell">
+              <div class="spell-icon" ng-click="selectSpell(spell)">
+                <img ng-src="http://ddragon.leagueoflegends.com/cdn/7.11.1/img/spell/{{spell.image.full}}" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="spell-text">
+            <div class="spell-name">{{selectedSpellName}}</div>
+            <div  ng-bind-html="selectedSpell"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="section lore-section">
+          <h3 class="text-center">LORE</h3>
+          <div ng-bind-html="lore"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10 col-md-offset-1 skins-section">
+      <h2>SKINS</h2>
+      <div class="carousel-wrapper">
+        <div uib-carousel active="active" interval="none">
+          <div uib-slide ng-repeat="skin in skins track by $index" index="skin.num">
+            <img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg" class="img-responsive">
+            <div class="carousel-caption">
+              <h4>{{skin.name}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-9 text-right">
+      <a href="#!/champions">
+        <button class="button-gold">back to champions list</button>
+      </a>
+    </div>
+
+  </div>

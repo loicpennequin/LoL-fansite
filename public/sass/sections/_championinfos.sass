@@ -5,7 +5,7 @@
   border: solid $color1 1px
   box-shadow: 0 0 0 2px $color1-half
   margin-bottom: 30px
-  background-color: rgba(0,0,0,0.5)
+  background-color: black
   padding: 0
 
   .champion-title-bg
@@ -16,10 +16,10 @@
     width: 100%
     z-index: 1
     mask-image: linear-gradient(to right, transparent 40%, black)
-    filter: blur(1px) contrast(150%)
+    filter: contrast(130%)
 
   h2, h3
-    padding-left: 10%
+    padding-left: 5%
     font-family: $font1
     text-shadow: 2px 2px 0 $color1-dark-half
 
@@ -34,23 +34,35 @@
 
   h3
     color: $color1
-    margin-top: 0
+    margin-top: 10px
     size: 0.7em
 
 .lore
   color: $color1
   font-family: $font1
 
-.spells-section
+.section
+  color: $color1-darker
   background: url('../assets/img/bg-cracks-low-contrast.jpg'), $color1-half
   background-size: cover
   background-blend-mode: multiply
-  border: 3px solid $color1
-  box-shadow: 0 0 0 5px $color1-dark
+  border: 2px solid $color1-darker
+  box-shadow: 0 0 0 3px $color1, 0 0 0 6px $color1-dark
+  padding: 10px
+  height: 400px
+  padding: 20px
 
   h3
     font-family: $font1
     margin-bottom: 10px
+
+.spells-section
+  background: url('../assets/img/bg-cracks-low-contrast.jpg'), $color1-half
+  background-size: cover
+  background-blend-mode: multiply
+  border: 2px solid $color1-darker
+  box-shadow: 0 0 0 3px $color1, 0 0 0 6px $color1-dark
+  height: 400px
 
 .spells-wrapper
   text-align: center
@@ -63,25 +75,43 @@
   display: inline-block
 
 .spell-icon
-  background-color: $color1-half
   display: inline-block
-  border: solid 2px $color1-half
-  box-shadow: 0 0 0 3px $color1-dark-half
-  padding: 5px
+  border: solid 1px $color1-darker
+  box-shadow: 0 0 0 3px $color1-half, 0 0 0 5px $color1-dark
   img
     width: 100%
 
   &:hover
     filter: contrast(110%) brightness(120%)
 
+.spell-name
+  font-size: 1.1em
+  font-weight: bold
+
 .spell-text
-  color: $color1
   transition: all 0.5s
-  width: 80%
+  width: 100%
   margin-left: auto
   margin-right: auto
   margin-bottom: 10px
   padding: 5px 10px
   font-family: $font2
-  height: 120px
-  background-color: rgba(0,0,0,0.8)
+  min-height: 120px
+
+.lore-section
+  font-size: 1em
+  overflow-y: scroll
+  &::first-letter
+    padding-left: 30px
+    font-weight: bold
+    font-size: 1.5em
+
+.skins-section
+  margin-bottom: 30px
+  h2
+    color: $color1
+    font-family: $font1
+    margin-top: 5px
+    margin-bottom: 15px
+    text-align: center
+    font-size: 3em

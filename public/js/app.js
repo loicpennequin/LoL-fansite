@@ -2,7 +2,7 @@ var app = angular.module('lolApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', '
 
 app.config(function($routeProvider){
   $routeProvider
-    .when('/', {templateUrl: 'partials/home.html'})
-    .when('/champions', {templateUrl: 'partials/championslist.html'})
-    .when('/champions/:id', {templateUrl: 'partials/champion-infos.html'})
+    .when('/', {templateUrl: 'views/home.html'})
+    .when('/champions', {templateUrl: 'views/championslist.html'})
+    .when('/champions/:id', {templateUrl: 'views/champion-infos.html'})
 })
