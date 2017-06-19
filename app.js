@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var router = express.Router();
 var fetch = require('node-fetch');
-var _apikey = "RGAPI-0e51f2ee-02fc-469f-86a3-0fd5bfaac865"
+var _apikey = ""
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
